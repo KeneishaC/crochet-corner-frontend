@@ -1,7 +1,11 @@
-export default function Dashboard(props) {
+export default function DashboardPage(props) {
     return (
         <main className="Page">
-            <h1>Dashboard</h1>
+            <h1>DashboardPage</h1>
+        <div>
+          
+        </div>
+
         </main>
     )
 }

@@ -1,7 +1,7 @@
-export default function Homepage(props) {
+export default function HomePage(props) {
     return (
         <main className="Page">
-            <h1>Homepage</h1>
+            <h1>HomePage</h1>
         </main>
     )
 }
