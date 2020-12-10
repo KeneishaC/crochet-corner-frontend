@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function createProject(props) {
+export default function CreateProject(props) {
     
     const [formState, setFormState] = useState({
         projectName: "",
