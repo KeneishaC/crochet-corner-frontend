@@ -1,20 +1,20 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-
 import HomePage from './Pages/HomePage';
 import DashboardPage from './Pages/DashboardPage';
 import LoginPage from './Pages/LoginPage';
 import SignupPage from './Pages/SignupPage';
-
-import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
-
+import ProjectCard from './components/ProjectCard/ProjectCard'
 import { getUser, logout } from './services/userService';
+import { fetchCrochetData } from './services/crochet'
 
 import './App.css';
 
 function App(props) {
+
   /* component state */
   const [ userState, setUserState ] = useState({ user: getUser()});
   
@@ -33,6 +33,23 @@ function App(props) {
     props.history.push('/');
   }
 
+  const [crochetData, setCrochetData] = useState(
+   []
+  )
+
+  async function getCrochetData() {
+    console.log('hello')
+    const data = await fetchCrochetData()
+    console.log('data', data)
+    setCrochetData(data);
+  
+  }
+
+  useEffect(() => {
+    getCrochetData();
+    console.log('effect')
+  }, [])
+
   return (
     <div className="App">
       <Header user={userState.user} handleLogout={handleLogout} />
@@ -42,11 +59,10 @@ function App(props) {
           } />
           <Route exact path="/dashboard" render={ props => 
             getUser()?
-            <DashboardPage/>
-  
+            <DashboardPage crochetData={crochetData}/>
             :
             <Redirect to="/login" />
-          } />
+          }/>
           <Route exact path="/signup" render={ props => 
             <SignupPage handleSignupOrLogin={handleSignupOrLogin} />
           } />

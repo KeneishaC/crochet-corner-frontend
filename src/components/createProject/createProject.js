@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { addCrochet } from "../../services/crochet"
 
 export default function CreateProject(props) {
     
     const [formState, setFormState] = useState({
         projectName: "",
-        desscription: "",
+        description: "",
         image: ""
     })
 
@@ -21,8 +22,20 @@ export default function CreateProject(props) {
     }
 
     async function handleSubmit(event) {
-        event.preventDefault()
-        this.setFormState({projectName:"", description:"", image:""})
+        event.preventDefault();
+        if(!formValid()) return;
+        try {
+          await addCrochet(formState);
+          setFormState({
+            projectName: "",
+            description: "",
+            image: ""
+          })
+        //   await props.getCrochetData()
+          //props.handleSignupOrLogin();
+        } catch (err){
+          alert(err.message);
+        }
     }
 
     return (
@@ -36,7 +49,7 @@ export default function CreateProject(props) {
                     <input value={formState.description} onChange={handleChange} type="text" text-area="" name="description" placeholder="Description" />
                 </div>
                 <div>
-                    <input value={formState.image} onChange={handleChange} type="img" name="image" placeholder="image"/>
+                    <input value={formState.image} onChange={handleChange} type="text" name="image" placeholder="image"/>
                 </div>
                 <div>
                     <input type="submit" value="Add Project"/>
