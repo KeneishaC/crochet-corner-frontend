@@ -7,7 +7,7 @@ import HomePage from './Pages/HomePage';
 import DashboardPage from './Pages/DashboardPage';
 import LoginPage from './Pages/LoginPage';
 import SignupPage from './Pages/SignupPage';
-import ProjectCard from './components/ProjectCard/ProjectCard'
+import EditPage from './Pages/EditPage/EditPage'
 import { getUser, logout } from './services/userService';
 import { fetchCrochetData } from './services/crochet'
 
@@ -42,7 +42,6 @@ function App(props) {
     const data = await fetchCrochetData()
     console.log('data', data)
     setCrochetData(data);
-  
   }
 
   useEffect(() => {
@@ -68,6 +67,9 @@ function App(props) {
           } />
           <Route exact path="/login" render={ props => 
             <LoginPage handleSignupOrLogin={handleSignupOrLogin} />
+          } />
+          <Route exact path="/edit" render={ props => 
+            <EditPage crochetData={crochetData}/>
           } />
         </Switch>
       <Footer />
