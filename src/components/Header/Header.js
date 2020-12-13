@@ -3,7 +3,7 @@ import './Header.css';
 
 export default function Header(props) {
     return (
-        <header className="Header">
+        <header className="Header fixed-top sticky-top" >
             <Link to="/">
                 <h1>The Crochet Corner</h1>
             </Link>

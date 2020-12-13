@@ -1,5 +1,6 @@
 .CreateProject {
     border: 4px solid #f7e3ad;
-    color:  #f7e3ad;
-    position: absolute;
+    color: white;
+    position: center;
+    height: 100px;
 }
