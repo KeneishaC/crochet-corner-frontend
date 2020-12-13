@@ -4,7 +4,7 @@ import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import HomePage from './Pages/HomePage';
-import DashboardPage from './Pages/DashboardPage';
+import ProjectPage from './Pages/ProjectPage';
 import LoginPage from './Pages/LoginPage';
 import SignupPage from './Pages/SignupPage';
 import EditPage from './Pages/EditPage/EditPage'
@@ -24,7 +24,7 @@ function App(props) {
     // place user into state using the setter function
     setUserState({ user: getUser() });
     // programmatically route user to dashboard
-    props.history.push('/dashboard');
+    props.history.push('/project');
   }
 
   function handleLogout() {
@@ -58,9 +58,9 @@ function App(props) {
           <Route exact path="/" render={ props => 
             <HomePage />
           } />
-          <Route exact path="/dashboard" render={ props => 
+          <Route exact path="/project" render={ props => 
             getUser()?
-            <DashboardPage crochetData={crochetData}/>
+            <ProjectPage crochetData={crochetData}/>
             :
             <Redirect to="/login" />
           }/>

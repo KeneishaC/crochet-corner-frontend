@@ -1,6 +1,7 @@
 .ProjectCard {
     display: flex;
     justify-content: space-evenly;
+    justify-content: flex-start;
     flex-wrap: wrap;
     border: 3px solid white;
 }

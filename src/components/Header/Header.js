@@ -12,8 +12,8 @@ export default function Header(props) {
                     {
                         props.user ?
                         <>
+                            <li><Link to="/project">Projects</Link></li>
                             <li><Link to="" onClick={props.handleLogout}>Logout</Link></li>
-                            <li><Link to="/dashboard">Dashboard</Link></li>
                         </>
                         :
                         <>

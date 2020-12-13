@@ -40,9 +40,9 @@ export default function CreateProject(props) {
     }
 
     return (
-        <main>
+        <main className="CreateProject">
             <h2>Add</h2>
-            <form onSubmit={handleSubmit} className={CreateProject}>
+            <form onSubmit={handleSubmit} className="CreateProjec">
                 <div>
                     <input value={formState.projectName} onChange={handleChange} type="text" name="projectName" placeholder="Name of Your Project"/>
                 </div>

@@ -1,7 +1,7 @@
 import  CreateProject  from '../components/CreateProject/CreateProject'
 import ProjectList from  '../components/ProjectList/ProjectList'
 
-export default function DashboardPage(props) {
+export default function ProjectPage(props) {
     return (
         <main className="Page">
         <div>
