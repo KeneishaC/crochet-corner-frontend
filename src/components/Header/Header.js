@@ -5,7 +5,7 @@ export default function Header(props) {
     return (
         <header className="Header fixed-top sticky-top" >
             <Link to="/">
-                <h1>The Crochet Corner</h1>
+                <h1>Crochet Corner</h1>
             </Link>
             <nav>
                 <ul className="NavLinks">

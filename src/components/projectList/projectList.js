@@ -18,6 +18,7 @@ return (
 }
 
 const listStyle = {
-   textAlign: "center"
+   textAlign: "center",
+   overflow: "hidden"
 
 }

@@ -45,42 +45,32 @@ export default function EditPage (props) {
          }
     }
 
-
-
-    // async function handleSubmit(event) {
-    //     event.preventDefault();
-    //     if(!formValid()) return;
-    //     try {
-    //       await update(formState);
-    //       setFormState({
-    //         projectName: "",
-    //         description: "",
-    //         image: ""
-    //       })
-    //     } catch (err){
-    //       alert(err.message);
-    //     }
-    // }
-
     return (
-        <main>
+        <main className="">
+            <form onSubmit={handleUpdate} style={editPage}>
             <h2> Edit </h2>
-            <form onSubmit={handleUpdate}>
                 <div>
-                    <input value={editState.projectName} type="text" name="projectName" onChange={handleChange} placeholder="Name of Your Project"/>
+                    <input className="form-control" value={editState.projectName} type="text" name="projectName" onChange={handleChange} placeholder="Name of Your Project"/>
                 </div>
                 <div>
-                    <input value={editState.description} type="text" text-area="" onChange={handleChange} name="description" placeholder="Description" />
+                    <textarea style={{height: "240px"}}  className="form-control" value={editState.description} type="text"  onChange={handleChange} name="description" placeholder="Description" />
                 </div>
                 <div>
-                    <input value={editState.image}  type="text" name="image"onChange={handleChange}  placeholder="image"/>
+                    <input className="form-control"  value={editState.image}  type="text" name="image"onChange={handleChange}  placeholder="image"/>
                 </div>
                 <div>
-                    <input type="submit" value="Edit Project"/>
+                    <input className="form-control btn"  type="submit" value="Edit Project"/>
                 </div>
 
             </form>
         </main>
         
     )
+}
+
+const editPage = {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center"
 }

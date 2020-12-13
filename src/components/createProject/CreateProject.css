@@ -2,13 +2,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    border: 4px solid #f7e3ad;
+    background-color: darkcyan;
     color: white;
     height: 400px;
-    position: relative;
-    top: 10vh;
-    bottom: 10vh;
-    left: -5vw;
+    width: 500px;
+    /* position: relative;
+    top: 1vh;
+    bottom: 10vh; */
+    /* left: -5vw; */
     /* right: 5vw; */
 }
 

@@ -19,7 +19,7 @@ const projectStyle = {
   flexDirection: "row-reverse",
   justifyContent: "space-evenly",
   // height: "800px",
-  marginTop: "100px",
+  // marginTop: "90px",
   marginBottom: "100px",
   overflow: "scroll",
   overflow: "hidden",

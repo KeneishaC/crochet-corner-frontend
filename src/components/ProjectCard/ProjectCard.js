@@ -26,15 +26,17 @@ export default function ProjectCard(props) {
    }
     
     return(     
-            <div className="card m-4 ProjectCard" key={props.id} id={props.id} style={ {width: "30rem", backgroundColor: "gray"}}>
-                <Link to={`/edit/${props.id}`} crochetData={props} >Edit</Link>
-                <div className="card-body" className="ProjectCard">
+        <div className="card m-4 ProjectCard" key={props.id} id={props.id} style={ {width: "30rem", backgroundColor: "darkcyan"}}>
+            <div className="card-body" className="ProjectCard">
+                <div className="d-flex justify-content-end">
+                    <Link className="btn" to={`/edit/${props.id}`} crochetData={props} >Edit</Link>
+                    <button  className="btn" onClick={handleDelete}>X</button>
+                </div>
                 <img className="card-img-top" src={props.image} alt="Card image cap"/>
                     <h5 className="card-title">{props.projectName}</h5>
                     <p className="card-text">{props.description}</p>
-                <button  onClick={handleDelete}>X</button>
-                </div>
             </div>
+        </div>
         
     )
 }
