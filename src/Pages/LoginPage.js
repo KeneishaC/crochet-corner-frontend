@@ -37,7 +37,7 @@ export default function LoginPage(props) {
         return !!(formState.email && formState.password);
     }
     return (
-        <main className="Page">
+        <main className="Page" >
             <h1>LoginPage</h1>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">

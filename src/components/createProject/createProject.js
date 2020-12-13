@@ -39,14 +39,14 @@ export default function CreateProject(props) {
     }
 
     return (
-        <main className="CreateProject">
+        <main className="Main">
+            <form onSubmit={handleSubmit} className="CreateProject">
             <h2>Add</h2>
-            <form onSubmit={handleSubmit} className="CreateProjec">
                 <div>
                     <input value={formState.projectName} onChange={handleChange} type="text" name="projectName" placeholder="Name of Your Project"/>
                 </div>
                 <div>
-                    <input value={formState.description} onChange={handleChange} type="text" text-area="" name="description" placeholder="Description" />
+                    <textarea style={{height: "244px"}} value={formState.description} onChange={handleChange} type="text" name="description" placeholder="Description" />
                 </div>
                 <div>
                     <input value={formState.image} onChange={handleChange} type="text" name="image" placeholder="image"/>

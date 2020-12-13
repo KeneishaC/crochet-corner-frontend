@@ -1,6 +1,19 @@
 .CreateProject {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     border: 4px solid #f7e3ad;
     color: white;
-    position: center;
-    height: 100px;
+    height: 400px;
+    position: relative;
+    top: 10vh;
+    bottom: 10vh;
+    left: -5vw;
+    /* right: 5vw; */
+}
+
+.Main {
+    justify-content:  center;
+    height: 80vh;
+    align-items: center;
 }

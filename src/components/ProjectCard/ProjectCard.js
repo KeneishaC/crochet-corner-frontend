@@ -25,9 +25,8 @@ export default function ProjectCard(props) {
 
    }
     
-    return(
-            <>
-            <div className="card m-4" key={props.id} id={props.id} style={{width: "40rem"}}>
+    return(     
+            <div className="card m-4 ProjectCard" key={props.id} id={props.id} style={ {width: "30rem", backgroundColor: "gray"}}>
                 <Link to={`/edit/${props.id}`} crochetData={props} >Edit</Link>
                 <div className="card-body" className="ProjectCard">
                 <img className="card-img-top" src={props.image} alt="Card image cap"/>
@@ -36,6 +35,6 @@ export default function ProjectCard(props) {
                 <button  onClick={handleDelete}>X</button>
                 </div>
             </div>
-            </>
+        
     )
 }

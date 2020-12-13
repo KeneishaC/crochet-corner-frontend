@@ -5,3 +5,11 @@
     flex-wrap: wrap;
     border: 3px solid white;
 }
+
+.card {
+    background-color: gray;
+}
+
+.bg-primary {
+    background-color: gray!important;
+}
