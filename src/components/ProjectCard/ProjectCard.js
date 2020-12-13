@@ -28,11 +28,11 @@ export default function ProjectCard(props) {
     return(
             <>
             <div className="card" key={props.id} id={props.id} style={{width: "20rem"}}>
+                <Link to={`/edit/${props.id}`} crochetData={props} >Edit</Link>
                 <div className="card-body" className="ProjectCard">
                 <img className="card-img-top" src={props.image} alt="Card image cap"/>
                     <h5 className="card-title">{props.projectName}</h5>
                     <p className="card-text">{props.description}</p>
-                <Link to={`/edit/${props.id}`} crochetData={props} >Edit</Link>
                 <button  onClick={handleDelete}>X</button>
                 </div>
             </div>

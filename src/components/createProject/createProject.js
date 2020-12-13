@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { addCrochet } from "../../services/crochet"
+import './CreateProject.css'
 
 export default function CreateProject(props) {
     
@@ -40,7 +41,7 @@ export default function CreateProject(props) {
 
     return (
         <main>
-            <h2>Add a new project Here</h2>
+            <h2>Add</h2>
             <form onSubmit={handleSubmit} className={CreateProject}>
                 <div>
                     <input value={formState.projectName} onChange={handleChange} type="text" name="projectName" placeholder="Name of Your Project"/>

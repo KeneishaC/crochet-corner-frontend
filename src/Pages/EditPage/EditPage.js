@@ -27,7 +27,10 @@ export default function EditPage (props) {
     }
 
     function handleChange(event) {
-      setEditState ( event.target.value )
+        setEditState(prevState => ({
+            ...prevState,
+            [event.target.name]: event.target.value
+        }))
     }
 
     async function handleUpdate(event) {
