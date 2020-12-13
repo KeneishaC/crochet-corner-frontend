@@ -33,6 +33,8 @@ function App(props) {
     props.history.push('/');
   }
 
+                  /*  Data from server..js */
+
   const [crochetData, setCrochetData] = useState(
    []
   )
@@ -68,9 +70,7 @@ function App(props) {
           <Route exact path="/login" render={ props => 
             <LoginPage handleSignupOrLogin={handleSignupOrLogin} />
           } />
-          <Route exact path="/edit" render={ props => 
-            <EditPage crochetData={crochetData}/>
-          } />
+          <Route path="/edit/:id" component={ EditPage }/>
         </Switch>
       <Footer />
     </div>

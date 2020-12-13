@@ -1,34 +1,46 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { update } from "../../services/crochet"
+import { showOne } from '../../services/crochet'
 import { Link } from 'react-router-dom'
 import {useHistory} from 'react-router-dom'
 
 export default function EditPage (props) {
-    
+    console.log(props)
+
     const history = useHistory()
 
-    const [formState, setFormState] = useState({
-        projectName: "",
-        description: "",
-        image: ""
-    })
+    const [editState, setEditState] = useState(
+        []
+    )
 
+    // function formValid() {
+    //     return !!(formState.projectName && formState.description && formState.image)
+    // }
 
-    function formValid() {
-        return !!(formState.projectName && formState.description && formState.image)
+    useEffect(() => {
+        getProject()
+    }, [props.match.params.id] )
+
+    async function getProject() {
+        const projectData = await showOne(props.match.params.id);
+        setEditState(projectData);        
     }
 
     function handleChange(event) {
-      setFormState(prevState => ({
-        ...prevState,
-        [event.target.name]: event.target.value
-      }))
+      setEditState ( event.target.value )
     }
 
     async function handleUpdate(event) {
+        event.preventDefault()
+        console.log(editState)
         try{
             history.push('/dashboard')
-            await update (props.id)
+            await update (editState, props.match.params.id)
+            // setEditState({
+            //     projectName: "",
+            //     description: "",
+            //     image: ""
+            // })
             window.location.reload()
          } catch (err) {
              alert(err.message)
@@ -55,18 +67,18 @@ export default function EditPage (props) {
     return (
         <main>
             <h2> Edit </h2>
-            <form onClick={handleUpdate}>
+            <form onSubmit={handleUpdate}>
                 <div>
-                    <input value={props.crochetData.projectName} onChange={handleChange} type="text" name="projectName" placeholder="Name of Your Project"/>
+                    <input value={editState.projectName} type="text" name="projectName" onChange={handleChange} placeholder="Name of Your Project"/>
                 </div>
                 <div>
-                    <input value={props.crochetData.description} onChange={handleChange} type="text" text-area="" name="description" placeholder="Description" />
+                    <input value={editState.description} type="text" text-area="" onChange={handleChange} name="description" placeholder="Description" />
                 </div>
                 <div>
-                    <input value={props.crochetData.image} onChange={handleChange} type="text" name="image" placeholder="image"/>
+                    <input value={editState.image}  type="text" name="image"onChange={handleChange}  placeholder="image"/>
                 </div>
                 <div>
-                    <input type="submit" value="Add Project"/>
+                    <input type="submit" value="Edit Project"/>
                 </div>
 
             </form>

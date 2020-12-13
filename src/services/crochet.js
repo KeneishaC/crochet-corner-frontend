@@ -12,8 +12,8 @@ function addCrochet(crochet) {
     }).then(res => res.json())
 }
 
-function update(crochet) {
-    return fetch(`${BASE_URL}{crochet._id}`, {
+function update(crochet, crochetid) {
+    return fetch(`${BASE_URL}${crochetid}`, {
         method: 'PUT',
         headers: {'content-type': 'application/json'},
         body: JSON.stringify(crochet)
@@ -26,9 +26,18 @@ function deleteOne(id){
     }) .then(res => res.json())
 }
 
+function showOne(id){
+    return fetch (`${BASE_URL}${id}`, { 
+    }) .then(res => res.json())
+}
+
+
+
+
 export {
     fetchCrochetData,
     addCrochet,
     update,
-    deleteOne
+    deleteOne,
+    showOne
 }

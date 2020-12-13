@@ -41,7 +41,7 @@ export default function CreateProject(props) {
     return (
         <main>
             <h2>Add a new project Here</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className={CreateProject}>
                 <div>
                     <input value={formState.projectName} onChange={handleChange} type="text" name="projectName" placeholder="Name of Your Project"/>
                 </div>

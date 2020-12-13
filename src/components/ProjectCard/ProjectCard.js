@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom'
 import {  Link } from 'react-router-dom'
 import { deleteOne } from '../../services/crochet'
 import { useHistory } from 'react-router-dom'
+import './ProjectCard'
 
 
 export default function ProjectCard(props) {
@@ -27,11 +28,11 @@ export default function ProjectCard(props) {
     return(
             <>
             <div className="card" key={props.id} id={props.id} style={{width: "20rem"}}>
+                <div className="card-body" className="ProjectCard">
                 <img className="card-img-top" src={props.image} alt="Card image cap"/>
-                <div className="card-body">
                     <h5 className="card-title">{props.projectName}</h5>
                     <p className="card-text">{props.description}</p>
-                <Link to='/edit'>Edit</Link>
+                <Link to={`/edit/${props.id}`} crochetData={props} >Edit</Link>
                 <button  onClick={handleDelete}>X</button>
                 </div>
             </div>
