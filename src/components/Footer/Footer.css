@@ -1,5 +1,8 @@
 .Footer{
+    background-color: #f5bd44;
+    color: #161414;
     height: 100px;
+    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;

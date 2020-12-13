@@ -16,7 +16,7 @@ export default function ProjectCard(props) {
        console.log(event._id)
        event.preventDefault();
        try{
-           history.push('/dashboard')
+           history.push('/project')
            await deleteOne(props.id)
            window.location.reload()
         } catch (err) {

@@ -32,8 +32,7 @@ export default function CreateProject(props) {
             description: "",
             image: ""
           })
-        //   await props.getCrochetData()
-          //props.handleSignupOrLogin();
+          window.location.reload()
         } catch (err){
           alert(err.message);
         }

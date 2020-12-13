@@ -37,13 +37,8 @@ export default function EditPage (props) {
         event.preventDefault()
         console.log(editState)
         try{
-            history.push('/dashboard')
+            history.push('/project')
             await update (editState, props.match.params.id)
-            // setEditState({
-            //     projectName: "",
-            //     description: "",
-            //     image: ""
-            // })
             window.location.reload()
          } catch (err) {
              alert(err.message)

@@ -3,7 +3,7 @@ import ProjectList from  '../components/ProjectList/ProjectList'
 
 export default function ProjectPage(props) {
     return (
-        <main className="Page">
+        <main className="Page" style={projectStyle}>
         <div>
           <CreateProject />
         </div>
@@ -12,4 +12,11 @@ export default function ProjectPage(props) {
         </div>
         </main>
     )
+}
+
+const projectStyle = {
+  display: "flex",
+  flexDirection: "row-reverse",
+  justifyContent: "space-evenly",
+  
 }

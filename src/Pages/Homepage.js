@@ -7,13 +7,17 @@ export default function HomePage(props) {
             {
                 props.user ?
                 <>
-                    <li><Link to="/project">Projects</Link></li>
-                    <li><Link to="" onClick={props.handleLogout}>Logout</Link></li>
+                <div>
+                    <Link to="/project">Projects</Link>
+                    <Link to="" onClick={props.handleLogout}>Logout</Link>
+                </div>
                 </>
                 :
                 <>
-                    <li><Link to="/signup">Signup</Link></li>
-                    <li><Link to="/login">Login</Link></li>
+                <div>
+                    <Link to="/signup">Signup</Link>
+                    <Link to="/login">Login</Link>
+                </div>
                 </>
             }
 

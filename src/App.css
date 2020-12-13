@@ -2,4 +2,8 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-image: url(./Images/backgroundimage.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
