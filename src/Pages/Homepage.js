@@ -20,7 +20,7 @@ export default function HomePage(props) {
                 :
                 <>
                 <div className="d-flex align-items-center justify-content-center mt-4">
-                    <h1>Welcome to Crochet Corner,&nbsp; please sign up or log in.</h1>
+                    <h1>Welcome to Crochet Corner,&nbsp; Are you ready to share your latest project?</h1>
                 </div>
                 <div style={homePage}>
                     <Link to="/signup" className="btn btn-light">Signup</Link>

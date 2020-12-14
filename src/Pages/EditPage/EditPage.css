@@ -4,11 +4,12 @@
     justify-content: space-evenly;
     background-color: #faf0e6b4;
     color: #b8860b;
-    height: 350px;
-    width: 300px;
+    height: 450px;
+    width: 400px;
 }
 
 .Main {
+    display: flex;
     justify-content:  center;
     height: 80vh;
     align-items: center;

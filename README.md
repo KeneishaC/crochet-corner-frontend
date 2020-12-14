@@ -8,14 +8,17 @@ Crochet Corner is a full CRUD MERN stack.  Users are able toshare images of thei
 - Node.js
 - AJAX
 - Google Fonts 
-- Font Awesome 
 - Unsplash
 
 
 ### Entity Relationship Diagram
+![ERD](../erd.png)
 
 ### Wireframe
-
+![Home]()
+![Login/Signup]()
+![Projects]()
+![Edit]()
 
 ### ScreenShots
 
