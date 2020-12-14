@@ -3,7 +3,7 @@ import { Link  } from 'react-router-dom'
 export default function HomePage(props) {
     console.log(props)
     return (
-        <div>
+        <div style={homePage}>
 
             {
                 props.user ?
@@ -30,5 +30,8 @@ export default function HomePage(props) {
 
 
 const homePage ={
-
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center"
 }

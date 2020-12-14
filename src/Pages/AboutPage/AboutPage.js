@@ -1,1 +1,0 @@
-<h1>Crochet Corner is a  place <a href="https://github.com/KeneishaC/crochet-corner-frontend"></a></h1>
