@@ -3,7 +3,8 @@
     color: #161414;
     height: 80px;
     font-size: 20px;
+    font-weight: bold;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
 }

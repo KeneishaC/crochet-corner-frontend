@@ -26,7 +26,7 @@ export default function ProjectCard(props) {
    }
     
     return(     
-        <div className="card m-4 ProjectCard" key={props.id} id={props.id} style={ {width: "30rem", backgroundColor: "linen"}}>
+        <div className="card m-4 ProjectCard" key={props.id} id={props.id} style={ {width: "40rem", backgroundColor: "linen"}}>
             <div className="card-body" className="ProjectCard">
                 <div className="d-flex justify-content-end">
                     <Link className="btn" to={`/edit/${props.id}`} crochetData={props} >Edit</Link>

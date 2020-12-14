@@ -12,13 +12,13 @@ export default function Header(props) {
                     {
                         props.user ?
                         <>
-                            <li><Link to="/project">Projects</Link></li>
-                            <li><Link to="" onClick={props.handleLogout}>Logout</Link></li>
+                            <li><Link to="/project" className="btn btn-outline-secondary">Projects</Link></li>
+                            <li><Link to="" onClick={props.handleLogout} className="btn btn-outline-secondary">Logout</Link></li>
                         </>
                         :
                         <>
-                            <li><Link to="/signup">Signup</Link></li>
-                            <li><Link to="/login">Login</Link></li>
+                            <li><Link to="/signup" className="btn btn-outline-secondary">Signup</Link></li>
+                            <li><Link to="/login" className="btn btn-outline-secondary">Login</Link></li>
                         </>
                     }
                 </ul>

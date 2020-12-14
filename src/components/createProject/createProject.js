@@ -46,7 +46,7 @@ export default function CreateProject(props) {
                     <input className="form-control" value={formState.projectName} onChange={handleChange} type="text" name="projectName" placeholder="Name of Your Project"/>
                 </div>
                 <div>
-                    <textarea className="form-control" style={{height: "244px"}} value={formState.description} onChange={handleChange} type="text" name="description" placeholder="Description" />
+                    <textarea className="form-control" style={{height: "187px"}} value={formState.description} onChange={handleChange} type="text" name="description" placeholder="Description" />
                 </div>
                 <div>
                     <input className="form-control" value={formState.image} onChange={handleChange} type="text" name="image" placeholder="image"/>

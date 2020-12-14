@@ -3,6 +3,7 @@ import { update } from "../../services/crochet"
 import { showOne } from '../../services/crochet'
 import { Link } from 'react-router-dom'
 import {useHistory} from 'react-router-dom'
+import './EditPage.css'
 
 export default function EditPage (props) {
     console.log(props)
@@ -46,8 +47,8 @@ export default function EditPage (props) {
     }
 
     return (
-        <main className="">
-            <form onSubmit={handleUpdate} style={editPage}>
+        <main className="Main">
+            <form onSubmit={handleUpdate}  className="EditPage">
             <h2> Edit </h2>
                 <div>
                     <input className="form-control col-auto" value={editState.projectName} type="text" name="projectName" onChange={handleChange} placeholder="Name of Your Project"/>
@@ -69,9 +70,3 @@ export default function EditPage (props) {
     )
 }
 
-const editPage = {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center"
-}
