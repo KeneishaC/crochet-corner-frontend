@@ -2,6 +2,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  color: darkgoldenrod;;
   background-image: url(./Images/backgroundimage.jpg);
   background-size: cover;
   background-position: center;

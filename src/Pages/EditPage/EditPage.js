@@ -50,16 +50,17 @@ export default function EditPage (props) {
             <form onSubmit={handleUpdate} style={editPage}>
             <h2> Edit </h2>
                 <div>
-                    <input className="form-control" value={editState.projectName} type="text" name="projectName" onChange={handleChange} placeholder="Name of Your Project"/>
+                    <input className="form-control col-auto" value={editState.projectName} type="text" name="projectName" onChange={handleChange} placeholder="Name of Your Project"/>
                 </div>
                 <div>
-                    <textarea style={{height: "240px"}}  className="form-control" value={editState.description} type="text"  onChange={handleChange} name="description" placeholder="Description" />
+                    <textarea style={{height: "240px"}}  className="form-control col-auto" value={editState.description} type="text"  onChange={handleChange} name="description" placeholder="Description" />
                 </div>
                 <div>
-                    <input className="form-control"  value={editState.image}  type="text" name="image"onChange={handleChange}  placeholder="image"/>
+                    <input className="form-control col-auto"  value={editState.image}  type="text" name="image"onChange={handleChange}  placeholder="image"/>
                 </div>
                 <div>
-                    <input className="form-control btn"  type="submit" value="Edit Project"/>
+                    <input className="form-control  col-auto btn"  type="submit" value="Edit Project"/>
+                    <Link to="/project" className="btn  form-control col-auto">Cancel</Link>
                 </div>
 
             </form>

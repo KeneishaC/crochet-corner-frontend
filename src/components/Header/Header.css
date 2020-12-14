@@ -1,6 +1,5 @@
 .Header {
     background-color: #df9b0857;
-    color: #c9c4c4;
     padding-left: 10px;
     padding-right: 10px;
     height: 100px;
@@ -11,7 +10,8 @@
 }
 .Header a {
     text-decoration: none;
-    color: lavender;
+    color: #777777;
+
 }
 .NavLinks {
     list-style: none;

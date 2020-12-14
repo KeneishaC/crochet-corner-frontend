@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: darkcyan;
-    color: white;
+    background-color: linen;
+    color: darkgoldenrod;
     height: 400px;
     width: 500px;
     /* position: relative;

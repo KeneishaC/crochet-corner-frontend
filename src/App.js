@@ -56,7 +56,7 @@ function App(props) {
       <Header user={userState.user} handleLogout={handleLogout} />
         <Switch>
           <Route exact path="/" render={ props => 
-            <HomePage />
+            <HomePage user={userState.user}/>
           } />
           <Route exact path="/project" render={ props => 
             getUser()?
