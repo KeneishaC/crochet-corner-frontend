@@ -16,15 +16,26 @@ Crochet Corner is a full CRUD MERN stack.  Users are able toshare images of thei
 
 ### Wireframe
 
+![wireframe](src/images/wireframe.png)
 
 ### ScreenShots
-![Home]()
-![Login/Signup]()
-![Projects]()
-![Edit]()
+![Home](src/images/home.png)
+
+![Login/Signup](src/images/login.png)
+
+![Projects](src/images/projects.png)
+
+![Edit](src/images/edit.png)
 
 
 ### Getting Started 
-[click here]()to see trello board
+[click here](https://trello.com/b/D3Tqj2uI/crochet-corner) to see trello board
 
+[click here](https://crochetcorner-frontend.netlify.app/) to see deployed app
+
+
+### Future enhancements
+- Add image upload instead of URL.
+- Allow users to be able to comment on another users post
+- Add a function that allows users to view the name of the user that made the post
 
