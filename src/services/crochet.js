@@ -13,7 +13,7 @@ function addCrochet(crochet) {
 }
 
 function update(crochet, crochetid) {
-    return fetch(`${BASE_URL}${crochetid}`, {
+    return fetch(`${BASE_URL}/${crochetid}`, {
         method: 'PUT',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(crochet)
@@ -21,13 +21,13 @@ function update(crochet, crochetid) {
 }
 
 function deleteOne(id){
-    return fetch (`${BASE_URL}${id}`,{
+    return fetch (`${BASE_URL}/${id}`,{
         method: 'DELETE'
     }) .then(res => res.json())
 }
 
 function showOne(id){
-    return fetch (`${BASE_URL}${id}`, { 
+    return fetch (`${BASE_URL}/${id}`, { 
     }) .then(res => res.json())
 }
 
