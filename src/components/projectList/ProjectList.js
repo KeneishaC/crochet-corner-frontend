@@ -1,6 +1,6 @@
 // import { useState } from 'react'
 import React from 'react'
-import ProjectCard from '../../components/ProjectCard/ProjectCard'
+import ProjectCard from '../ProjectCard/ProjectCard'
 
 export default function ProjectList(props){
 // console.log(props.crochetData[1]._id)
