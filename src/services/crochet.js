@@ -17,7 +17,9 @@ function update(crochet, crochetid) {
         method: 'PUT',
         headers: {'content-type': 'application/json'},
         body: JSON.stringify(crochet)
-    }).then(res => res.json());
+//     }).then(res => res.json());
+    }).then(res => res.text())
+    .then(text => console.log(text))
 }
 
 function deleteOne(id){
