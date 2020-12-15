@@ -1,5 +1,5 @@
 # Crochet Corner 
-Crochet Corner is a full CRUD MERN stack.  Users are able toshare images of their latest crochet  projects. This app features full user authentincation. If a user is not signed in they will not be allowed to see the contents of the app. 
+Crochet Corner is a full CRUD MERN stack.  Users are able to share images of their latest crochet  projects. This app features full user authentincation. If a user is not signed in they will not be allowed to see the contents of the app. 
 
 ## Technologies Used 
 - React
@@ -12,20 +12,20 @@ Crochet Corner is a full CRUD MERN stack.  Users are able toshare images of thei
 
 
 ### Entity Relationship Diagram
-![ERD](src/images/erd.png)
+![ERD](src/Images/erd.png)
 
 ### Wireframe
 
-![wireframe](src/images/wireframe.png)
+![wireframe](src/Images/wireframe.png)
 
 ### ScreenShots
-![Home](src/images/home.png)
+![Home](src/Images/home.png)
 
-![Login/Signup](src/images/login.png)
+![Login/Signup](src/Images/login.png)
 
-![Projects](src/images/projects.png)
+![Projects](src/Images/projects.png)
 
-![Edit](src/images/edit.png)
+![Edit](src/Images/edit.png)
 
 
 ### Getting Started 
