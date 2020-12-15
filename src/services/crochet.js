@@ -1,4 +1,4 @@
-const BASE_URL = 'https://crochetcorner-backend.herokuapp.com/crochet'
+const BASE_URL = 'https://crochetcorner-backend.herokuapp.com/api/crochet'
 
 function fetchCrochetData(){
     return fetch(BASE_URL).then(res => res.json())
