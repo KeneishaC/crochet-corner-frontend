@@ -3,7 +3,7 @@ import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import HomePage from './Pages/HomePage';
+import HomePage from './Pages/HomePage.js';
 import ProjectPage from './Pages/ProjectPage';
 import LoginPage from './Pages/LoginPage';
 import SignupPage from './Pages/SignupPage';
