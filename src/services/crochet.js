@@ -7,7 +7,7 @@ function fetchCrochetData(){
 function addCrochet(crochet) {
     return fetch(BASE_URL,{
         method: 'POST',
-        headers: new Headers({'content-type': 'application/json'}),
+        headers: new Headers({'Content-Type': 'application/json'}),
         body: JSON.stringify(crochet)
     }).then(res => res.json())
 }
@@ -15,11 +15,9 @@ function addCrochet(crochet) {
 function update(crochet, crochetid) {
     return fetch(`${BASE_URL}${crochetid}`, {
         method: 'PUT',
-        headers: {'content-type': 'application/json'},
+        headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(crochet)
-//     }).then(res => res.json());
-    }).then(res => res.text())
-    .then(text => console.log(text))
+    }).then(res => res.json());
 }
 
 function deleteOne(id){
