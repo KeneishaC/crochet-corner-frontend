@@ -12,7 +12,7 @@ Crochet Corner is a full CRUD MERN stack.  Users are able toshare images of thei
 
 
 ### Entity Relationship Diagram
-![ERD](../erd.png)
+![ERD](../images/erd.png)
 
 ### Wireframe
 
